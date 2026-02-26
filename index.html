@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>RushPay – earn by simple tasks | official landing</title>
+    <!-- SEO meta -->
+    <meta name="description" content="RushPay Official: Realize your earning potential. Complete simple tasks, use referral code M8NdJs and start earning instantly. Trusted by thousands.">
+    <meta name="keywords" content="RushPay, earn money online, task earning, referral code M8NdJs, earning app">
+    <meta name="author" content="RushPay">
+    <link rel="canonical" href="https://mishraaman.co.in/RushPay_Official">
+    <!-- open graph -->
+    <meta property="og:title" content="RushPay – earn by simple tasks">
+    <meta property="og:description" content="Start your earning journey today. Download now and use code M8NdJs.">
+    <meta property="og:url" content="https://mishraaman.co.in/RushPay_Official">
+    <meta property="og:type" content="website">
+    <!-- favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- google font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* LIGHT THEME (taken from index(1).html light variables, premium blue theme) */
+        :root {
+            --primary-color: #1a2980;
+            --secondary-color: #26d0ce;
+            --accent-color: #ff6b35;
+            --gold-color: #ffd700;
+            --text-color: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-color: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --border-color: #e8eef3;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gradient-primary: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --radius: 16px;
+            --btn-bg: #1a2980;        /* for compatibility with some .btn references */
+            --btn-text: white;
+            --header-bg: rgba(255,255,255,0.85);
+            --footer-bg: #ffffff;
+            --footer-text: #2c3e50;
+        }
+
+        /* DARK THEME (taken from rushpay.html dark class + gold premium feel) */
+        body.dark {
+            --primary-color: #D4AF37;
+            --secondary-color: #FFD700;
+            --accent-color: #ff8c42;
+            --gold-color: #FFD700;
+            --text-color: #f5f5f5;
+            --text-light: #b0b0b0;
+            --bg-color: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #222222;
+            --border-color: #333333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-hover: 0 15px 40px rgba(212, 175, 55, 0.2);
+            --gradient-primary: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --btn-bg: #b7863d;
+            --btn-text: #0c0b10;
+            --header-bg: rgba(18, 16, 22, 0.9);
+            --footer-bg: #070509;
+            --footer-text: #ede0ce;
+            background: radial-gradient(circle at 30% 30%, #2b2419, #0a0807 80%);
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            transition: background-color 0.3s ease, color 0.2s ease;
+            min-height: 100vh;
+        }
+
+        body.dark {
+            background: radial-gradient(circle at 30% 30%, #2b2419, #0a0807 80%);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ----- HEADER (premium style from index(1).html) ----- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(12px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        /* desktop nav */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: 0.2s;
+            font-size: 1rem;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* theme toggle + hamburger */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        #theme-toggle:hover {
+            transform: scale(1.15);
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--text-color);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* mobile nav */
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            border-top: 1px solid var(--border-color);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 70px;
+            box-shadow: var(--shadow);
+            z-index: 40;
+        }
+
+        .mobile-nav a {
+            padding: 0.9rem 0;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        /* buttons (from rushpay.html but polished) */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: 700;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        .btn-outline:hover {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        /* referral block */
+        .referral-block {
+            background: var(--bg-card);
+            border-radius: 60px;
+            padding: 1.8rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .code-area {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-secondary);
+            padding: 0.4rem 0.4rem 0.4rem 1.8rem;
+            border-radius: 60px;
+            border: 1px solid var(--border-color);
+        }
+
+        .code {
+            font-family: monospace;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .copy-btn {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .download-btn {
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 1.2rem;
+            padding: 0.9rem 2.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: var(--transition);
+        }
+        .download-btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 999;
+        }
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* hero */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 0 2rem;
+        }
+        .hero-left {
+            flex: 1 1 350px;
+        }
+        .hero-left .big-logo {
+            width: 140px;
+            height: auto;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+        .hero-left h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-left p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 500px;
+        }
+
+        /* video grid */
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .video-item {
+            flex: 1 1 300px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .video-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        .video-item iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: calc(var(--radius) - 4px);
+        }
+
+        /* support cards */
+        .support-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            flex: 1 1 220px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .card i {
+            font-size: 2.8rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        /* contact form */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 1rem 1.8rem;
+            border-radius: 50px;
+            border: 2px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        textarea {
+            border-radius: 30px;
+            resize: vertical;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26,41,128,0.1);
+        }
+
+        /* trust card */
+        .trust-card {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        /* CTA section buttons */
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin: 2.5rem 0;
+        }
+
+        /* footer (premium style) */
+        footer {
+            background: var(--bg-secondary);
+            color: var(--text-color);
+            padding: 3rem 0 1.5rem;
+            border-radius: 3rem 3rem 0 0;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+            gap: 2.5rem;
+        }
+        .footer-grid a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        hr {
+            border-color: var(--border-color);
+            margin: 2rem 0 1rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            font-size: 1.5rem;
+        }
+        .social-icon:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-6px);
+        }
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero-left h1 {
+                font-size: 2.4rem;
+            }
+            .referral-block {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .code-area {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="light"> <!-- default light -->
+    <div class="toast" id="toastMsg">Referral code copied! Use it during registration.</div>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo-area">
+                <img src="https://rushpayofficial.com/logo.webp" alt="RushPay logo" class="logo-img" onerror="this.src='https://via.placeholder.com/44?text=RP'">
+                <span class="logo-text">RushPay</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <a href="#">Support</a>
+                <a href="#">Tutorial</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#support">Support</a>
+            <a href="#">Tutorial</a>
+            <a href="#">Blog</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section>
+            <div class="hero">
+                <div class="hero-left">
+                    <img src="https://rushpayofficial.com/logo.webp" alt="RushPay big logo" class="big-logo" onerror="this.src='https://via.placeholder.com/130?text=RP'">
+                    <h1>realize your earning<br>by doing simple tasks</h1>
+                    <p>Quick, trustworthy, and rewarding. Join thousands already earning.</p>
+                </div>
+                <div style="flex:1; min-width: 200px;"></div>
+            </div>
+        </section>
+
+        <!-- Download + referral copy (functional from rushpay.html) -->
+        <section>
+            <div class="referral-block">
+                <div>
+                    <span style="font-weight: 700;">✨ Use referral code</span>
+                    <div class="code-area">
+                        <span class="code" id="referralCode">M8NdJs</span>
+                        <button class="copy-btn" id="copyBtn"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                </div>
+                <a href="#" class="download-btn" id="downloadLink"><i class="fas fa-download"></i> Download App</a>
+            </div>
+        </section>
+
+        <!-- Tutorial + YT videos -->
+        <section>
+            <h2 style="font-size: 2.4rem; margin-bottom: 1rem;">📘 step‑by‑step tutorial</h2>
+            <div class="video-grid">
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/BJ8sD7wIGIs" title="tutorial 1" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/BJ8sD7wIGIs" title="tutorial 2" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/BJ8sD7wIGIs" title="tutorial 3" allowfullscreen></iframe></div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-outline" style="font-size: 1.2rem;"><i class="fab fa-youtube"></i> see all tutorials →</a>
+            </div>
+        </section>
+
+        <!-- Support + contact form (whatsapp redirect) -->
+        <section id = "support">
+            <h2 style="font-size: 2.4rem;">📞 support & contact</h2>
+            <div class="support-cards">
+                <div class="card"><i class="fab fa-whatsapp"></i> <h3>WhatsApp</h3><p>+91 98765 43210</p><a href="#" class="btn">chat</a></div>
+                <div class="card"><i class="fab fa-telegram"></i> <h3>Telegram</h3><p>@rushpay_group</p><a href="#" class="btn">join</a></div>
+                <div class="card"><i class="far fa-envelope"></i> <h3>Quick form</h3><p>we reply via WhatsApp</p></div>
+            </div>
+            <!-- contact form -->
+            <div class="contact-form">
+                <form id="whatsappForm">
+                    <div class="form-group"><input type="text" placeholder="Your name" id="name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email (optional)" id="email"></div>
+                    <div class="form-group"><textarea rows="3" placeholder="Your message..." id="message" required></textarea></div>
+                    <button type="submit" class="btn" style="width:100%;"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Trust blog section -->
+        <section>
+            <div class="trust-card">
+                <h2 style="font-size: 2.2rem;">🔒 is RushPay really trustable?</h2>
+                <p style="font-size: 1.3rem; margin: 1.5rem 0;">We've already paid ₹1.2Cr+ to users. Read our blog to see proof & payment stories.</p>
+                <a href="#" class="btn">📰 know more from blog →</a>
+            </div>
+        </section>
+
+        <!-- Ready to start? CTA with copy and download -->
+        <section style="text-align: center;">
+            <h2 style="font-size: 2.8rem; margin-bottom: 2rem;">Ready to Start Your Earning Journey?</h2>
+            <div class="cta-row">
+                <a href="#" class="btn" id="ctaDownload"><i class="fas fa-download"></i> Download RushPay</a>
+                <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--bg-card); padding: 0.2rem 0.2rem 0.2rem 2rem; border-radius: 60px;">
+                    <span class="code">M8NdJs</span>
+                    <button class="copy-btn" id="copyBtn2"><i class="far fa-copy"></i> Copy</button>
+                </div>
+                <a href="#" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#" class="btn btn-outline"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (premium) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><h4>RushPay</h4><p>Earn simple, live large.</p><img src="logo.webp" width="50" style="border-radius:12px;" onerror="this.style.display='none'"></div>
+                <div><h4>Product</h4><ul><li>Download</li><li>Referral</li><li>Earnings</li></ul></div>
+                <div><h4>Support</h4><ul><li>Contact</li><li>Telegram</li><li>WhatsApp</li></ul></div>
+                <div><h4>Legal</h4><ul><li>Privacy</li><li>Terms</li></ul></div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+            <hr>
+            <p style="text-align: center;">© 2025 RushPay Official — Light theme + Dark theme with full functionality</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // ----- THEME TOGGLE (dark / light) -----
+            const toggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const icon = toggle.querySelector('i');
+            // set initial icon based on class (light by default)
+            if (body.classList.contains('dark')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+
+            toggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                } else {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                }
+            });
+
+            // ----- MOBILE MENU -----
+            const hamburger = document.getElementById('hamburger');
+            const mobileNav = document.getElementById('mobileNav');
+            hamburger.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+            });
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileNav.classList.remove('active'));
+            });
+
+            // ----- REFERRAL CODE COPY (both buttons) -----
+            const copyBtn = document.getElementById('copyBtn');
+            const copyBtn2 = document.getElementById('copyBtn2');
+            const toast = document.getElementById('toastMsg');
+            const referralCode = 'M8NdJs';
+
+            function copyCode() {
+                navigator.clipboard.writeText(referralCode).then(() => {
+                    toast.classList.add('show');
+                    setTimeout(() => toast.classList.remove('show'), 3000);
+                }).catch(() => alert('Manual copy: ' + referralCode));
+            }
+            if (copyBtn) copyBtn.addEventListener('click', copyCode);
+            if (copyBtn2) copyBtn2.addEventListener('click', copyCode);
+
+            // ----- DOWNLOAD LINK with toast + redirect simulation -----
+            const downloadLink = document.getElementById('downloadLink');
+            const ctaDownload = document.getElementById('ctaDownload');
+
+            function handleDownload(e) {
+                e.preventDefault();
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+                // redirect after 1.5s (simulate)
+                setTimeout(() => {
+                    window.location.href = 'https://play.google.com/store'; // replace with actual store
+                }, 1500);
+            }
+            if (downloadLink) downloadLink.addEventListener('click', handleDownload);
+            if (ctaDownload) ctaDownload.addEventListener('click', handleDownload);
+
+            // ----- WHATSAPP FORM SUBMIT (redirect) -----
+            const waForm = document.getElementById('whatsappForm');
+            if (waForm) {
+                waForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    let text = `Hello RushPay, I'm ${name}.`;
+                    if (email) text += ` Email: ${email}.`;
+                    text += ` Message: ${message}`;
+                    const url = `https://wa.me/919876543210?text=${encodeURIComponent(text)}`; // demo number
+                    window.open(url, '_blank');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
