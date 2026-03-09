@@ -634,19 +634,21 @@
         <section id = "support">
             <h2 style="font-size: 2.4rem;">📞 support & contact</h2>
             <div class="support-cards">
-                <div class="card"><i class="fab fa-whatsapp"></i> <h3>WhatsApp</h3><p>+91 98765 43210</p><a href="#" class="btn">chat</a></div>
-                <div class="card"><i class="fab fa-telegram"></i> <h3>Telegram</h3><p>@rushpay_group</p><a href="#" class="btn">join</a></div>
+                <div class="card"><i class="fab fa-whatsapp"></i> <h3>WhatsApp</h3><p>+91 8598866041</p><a href="https://wa.me/918598866041" class="btn">chat</a></div>
+                <div class="card"><i class="fab fa-telegram"></i> <h3>Telegram</h3><p>RushpayAM</p><a href="https://t.me/RushpayAM" class="btn">join</a></div>
                 <div class="card"><i class="far fa-envelope"></i> <h3>Quick form</h3><p>we reply via WhatsApp</p></div>
             </div>
             <!-- contact form -->
-            <div class="contact-form">
+            <!-- <div class="contact-form">
                 <form id="whatsappForm">
                     <div class="form-group"><input type="text" placeholder="Your name" id="name" required></div>
                     <div class="form-group"><input type="email" placeholder="Email (optional)" id="email"></div>
                     <div class="form-group"><textarea rows="3" placeholder="Your message..." id="message" required></textarea></div>
                     <button type="submit" class="btn" style="width:100%;"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
                 </form>
-            </div>
+            </div> -->
+
+            
         </section>
 
         <!-- Trust blog section -->
@@ -775,5 +777,39 @@
             }
         })();
     </script>
+    <!-- contact form -->
+<div class="contact-form">
+    <form id="whatsappForm">
+        <div class="form-group">
+            <input type="text" placeholder="Your name" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" placeholder="Email (optional)" id="email">
+        </div>
+
+        <div class="form-group">
+            <textarea rows="3" placeholder="Your message..." id="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width:100%;">
+            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+        </button>
+    </form>
+</div>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var phone = "918598866041";
+
+    var text = "Hi, I am contacting from RushPay Official Website. I want to know how the RushPay works";
+
+    var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+});
+</script>
 </body>
 </html>
